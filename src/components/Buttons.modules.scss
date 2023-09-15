@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+.button {
+  position: relative;
+  width: 148px;
+  height: 47px;
+  display: inline-flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 58px;
+  background:  #FF5C00;
+  border: none;
+  color:  #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+    &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('./placeholder_white.png') center (center / cover) no-repeat;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('./placeholder_white.png') center (center / cover) no-repeat;
+  }
+  &:hover {
+    background:#FF7527;
+  }
+  &:focus {
+    box-shadow: 0px 0px 0px 4px rgba(249, 115, 22, 0.20);
+  }
+  &_disable {
+    color: #9C9C9C;
+    background: #E4E4E4;
+    &::after, &::before {
+      box-shadow: none;
+      background: url('./placeholder_disable.png') center (center / cover) no-repeat;
+    }
+    &:hover, &:focus {
+      background: #E4E4E4;
+      box-shadow:none;
+    }
+  }
+}
