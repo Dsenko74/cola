@@ -4,8 +4,10 @@ import Button from './components';
 function App() {
   return (
     <>
-      <Button/>
-      <p>Lets start</p>
+      <Button>Button</Button>
+      
+      {/* <Button name='button button_small'/>
+      <Button name='button button_disable button_disable_small'/> */}
     </>
   );
 }
