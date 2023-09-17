@@ -1,13 +1,14 @@
 import React from 'react';
-import Button from './components';
+import Button from './components/Button';
 
 function App() {
   return (
     <>
-      <Button>Button</Button>
-      
-      {/* <Button name='button button_small'/>
-      <Button name='button button_disable button_disable_small'/> */}
+      <Button  
+        //disabled={'disabled'}
+        type={'outline'}
+        size={'small'}
+        >Button</Button>
     </>
   );
 }
