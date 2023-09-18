@@ -1,6 +1,6 @@
-import React from 'react'
+//import React from 'react'
 import styles from "./Button.module.scss";
-import "./Button.module.scss";
+//import "./Button.module.scss";
 import classNames from "classnames"
 
 const Button = ({children, type='primary', size='normal', className, htmlType, ...htmlProps}) => {

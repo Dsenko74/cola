@@ -1,0 +1,54 @@
+@import "../../style/variables.scss";
+
+.wrapper {
+  width: 271px;
+  height: 48px;
+  position: relative;
+  &::after, &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('./placeholder_black.png') center (center / cover) no-repeat;
+    z-index: 10;
+  }
+  &::before {
+    left: 16px;
+  }
+
+}
+.input {
+  box-sizing: border-box;
+  position: relative;
+  width: 271px;
+  height: 48px;
+  padding: 13px 16px 12px 50px;
+  border-radius: 58px;
+  border: 1px solid $Neutral30;
+  font-family: Poppins;
+
+  &::placeholder {
+    color: $Neutral40;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  &.default {
+    background: $Neutral10;
+  }
+  &.active {
+    border: 1px solid $Primary60;
+  }
+  &.filled {
+    &::placeholder {
+      color: $Neutral100;
+    }
+  }
+  &.disable {
+    background: $Neutral30;
+  }
+}
