@@ -5,9 +5,9 @@ function App() {
   return (
     <>
       <Button  
-        //disabled={'disabled'}
+        //disabled='disable'
         type={'outline'}
-        size={'small'}
+        size={'normal'}
         >Button</Button>
     </>
   );
