@@ -1,20 +1,19 @@
-import React from 'react';
-import Button from './components/Button';
-import Input from './components/Input';
+//import React from 'react';
+import Button from "./components/Button";
+import Input from "./components/Input";
 
 function App() {
   return (
     <>
-      <Button  
+      <Button
         //disabled='disable'
-        type={'outline'}
-        size={'normal'}
-        >Button</Button>
+        type={"outline"}
+        size={"normal"}
+      >
+        Button
+      </Button>
 
-      <Input
-        placeholder="Placeholder"
-        state={'disable'}
-      />  
+      <Input value="else" placeholder="Placeholder" state={"disable"} />
     </>
   );
 }
