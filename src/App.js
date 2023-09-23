@@ -1,11 +1,14 @@
 //import React from 'react';
-import Button from "./components/Button";
-import Input from "./components/Input";
+// import Button from "./components/Button";
+// import Input from "./components/Input";
+import "./App.scss";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
     <>
-      <Button
+      <Login />
+      {/* <Button
         //disabled='disable'
         type={"outline"}
         size={"normal"}
@@ -13,7 +16,12 @@ function App() {
         Button
       </Button>
 
-      <Input value="else" placeholder="Placeholder" state={"disable"} />
+      <Input
+        value="else"
+        placeholder="Placeholder"
+        //type={"login"}
+        state={"disable"}
+      /> */}
     </>
   );
 }

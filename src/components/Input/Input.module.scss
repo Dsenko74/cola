@@ -11,28 +11,48 @@
     width: 24px;
     height: 24px;
     right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    //background: url('./placeholder_black.png') center (center / cover) no-repeat;
+    bottom: 50%;
+    transform: translateY(50%);
+    background: url('./placeholder_black.png') center (center / cover) no-repeat;
     z-index: 10;
   }
   &::before {
     left: 16px;
-    background: url('./user.png') center (center / cover) no-repeat;
+  }
+  &.login {
+    margin-top: 54px;
+    width: 443px;
+    &::after {
+      background: none;
+    }
+    &::before {
+      background: url('./user.png') center (center / cover) no-repeat;
+    }
   }
 
 }
+.label {
+  color: $Neutral60;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
 .input {
   box-sizing: border-box;
   position: relative;
-  width: 271px;
-  height: 48px;
-  padding: 13px 16px 12px 50px;
+  // width: 271px;
+  // height: 48px;
+  padding: 14px 16px 10px 50px;
   border-radius: 58px;
   border: 1px solid $Neutral30;
-  font-family: Poppins;
+  &.login {
+    width: 443px;
+  }
 
   &::placeholder {
+    display: flex;
+    align-items: center;
     color: $Neutral40;
     font-size: 16px;
     font-weight: 400;
@@ -52,4 +72,5 @@
   &.disable {
     background: $Neutral30;
   }
+
 }
