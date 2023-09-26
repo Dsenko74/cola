@@ -1,0 +1,95 @@
+@import "../../style/variables.scss";
+
+// Передача MARGIN через жопу
+.margin {
+  &20{
+    margin-top: 20px;
+  }
+  &32 {
+    margin-top: 32px;
+  }
+  
+}
+.wrapper {
+  width: 271px;
+  height: 48px;
+  position: relative;
+  &::after, &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    bottom: 50%;
+    transform: translateY(50%);
+    background: url('./placeholder_black.png') center (center / cover) no-repeat;
+    z-index: 10;
+  }
+  &::before {
+    left: 16px;
+  }
+  &.login {
+    &::after {
+      background: none;
+    }
+    &::before {
+      background: url('./user.png') center (center / cover) no-repeat;
+    }
+  }
+  &.password {
+    &::after {
+      background: none;
+    }
+    &::before {
+      background: url('./lock-close.png') center (center / cover) no-repeat;
+    }
+  }
+
+}
+.label {
+  color: $Neutral60;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.input {
+  box-sizing: border-box;
+  position: relative;
+  // width: 271px;
+  // height: 48px;
+  padding: 14px 16px 10px 50px;
+  border-radius: 58px;
+  border: 1px solid $Neutral30;
+  &.login {
+    width: 443px;
+  }
+  &.password {
+    width: 443px;
+  }
+
+  &::placeholder {
+    display: flex;
+    align-items: center;
+    color: $Neutral40;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  &.default {
+    background: $Neutral10;
+  }
+  &.active {
+    border: 1px solid $Primary60;
+  }
+  &.filled {
+    &::placeholder {
+      color: $Neutral100;
+    }
+  }
+  &.disable {
+    background: $Neutral30;
+  }
+
+}
