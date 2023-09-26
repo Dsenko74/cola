@@ -152,4 +152,28 @@
       }
     }
   }
+
+
+
+  &.login {
+    margin-top: 32px;
+    background:  $Primary60;
+    &:hover {
+      background:$Primary50;
+    }
+    &::after,&::before {
+      background: none;
+    }
+    &:disabled {
+      color: $Neutral50;
+      background: $Neutral30;
+       &:hover, &:focus {
+        background: $Neutral30;
+        box-shadow:none;
+      }
+    }
+    &.normal {
+      width: 443px;
+    }
+  }
 }

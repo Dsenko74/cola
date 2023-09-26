@@ -15,10 +15,26 @@ const Login = () => {
         <p className={classNames(styles.modal__discr)}>
           Lorem Ipsum has been the industrys standard dummy text ever since.
         </p>
-        <Input type="login" placeholder="Enter username">
-          username
-        </Input>
-        <Button />
+        <form>
+          <Input
+            type="login"
+            margin="margin32"
+            placeholder="Enter username"
+            label="Username"
+          />
+          <Input
+            type="password"
+            margin="margin20"
+            placeholder="Enter password"
+            label="Password"
+          />
+          <p className={classNames(styles.modal__remaind)}>Forgot password?</p>
+          <Button type="login" size="normal">
+            Running order
+          </Button>
+        </form>
+
+        <p className={classNames(styles.modal__footer)}>End user agreement</p>
       </div>
     </div>
   );

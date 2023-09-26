@@ -5,7 +5,8 @@ import classNames from "classnames";
 // інпут має 4 state default  active  filled  disable
 
 const Input = ({
-  children,
+  label,
+  margin,
   type = "primary",
   state = "default",
   //customClassName,
@@ -13,16 +14,20 @@ const Input = ({
   ...htmlProps
 }) => {
   return (
-    <div className={classNames(styles.wrapper, styles[type])}>
-      <label htmlFor="inputField" className={classNames(styles.label)}>
-        {children}
-      </label>
-      <input
-        id="inputField"
-        {...htmlProps}
-        type={htmlType}
-        className={classNames(styles.input, styles[type], styles[state])}
-      ></input>
+    <div className={classNames(styles[margin])}>
+      {label && (
+        <label htmlFor="inputField" className={classNames(styles.label)}>
+          {label}
+        </label>
+      )}
+      <div className={classNames(styles.wrapper, styles[type])}>
+        <input
+          id="inputField"
+          {...htmlProps}
+          type={htmlType}
+          className={classNames(styles.input, styles[type], styles[state])}
+        ></input>
+      </div>
     </div>
   );
 };

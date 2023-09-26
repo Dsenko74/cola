@@ -1,5 +1,15 @@
 @import "../../style/variables.scss";
 
+// Передача MARGIN через жопу
+.margin {
+  &20{
+    margin-top: 20px;
+  }
+  &32 {
+    margin-top: 32px;
+  }
+  
+}
 .wrapper {
   width: 271px;
   height: 48px;
@@ -20,13 +30,19 @@
     left: 16px;
   }
   &.login {
-    margin-top: 54px;
-    width: 443px;
     &::after {
       background: none;
     }
     &::before {
       background: url('./user.png') center (center / cover) no-repeat;
+    }
+  }
+  &.password {
+    &::after {
+      background: none;
+    }
+    &::before {
+      background: url('./lock-close.png') center (center / cover) no-repeat;
     }
   }
 
@@ -47,6 +63,9 @@
   border-radius: 58px;
   border: 1px solid $Neutral30;
   &.login {
+    width: 443px;
+  }
+  &.password {
     width: 443px;
   }
 
