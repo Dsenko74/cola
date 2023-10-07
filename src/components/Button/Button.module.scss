@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import "../../style/variables.scss";
+
+// загальні стилі для всіх кнопок
+// Кпонпка має чотири типи type: primary, secondary, outline, login
+//та два розміри: normal, small
+//стан disabled для всіх кнопок однаковий
+.button {
+  position: relative;
+  border-radius: 58px;
+  border: none;
+  color:  #FFF;
+  font-family: Poppins;
+  &::after, &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('./placeholder_white.png') center (center / cover) no-repeat;
+  }
+  &::before {
+    left: 12px;
+  }
+  &:focus {
+    box-shadow: 0px 0px 0px 4px rgba(249, 115, 22, 0.20);
+  }
+  &.normal {
+    width: 148px;
+    height: 47px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  &.small {
+    width:120px;
+    height:36px;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 19px;
+    &::after {
+      right: 8px;
+    }
+    &::before {
+      left: 8px;
+    }
+  }
+
+// стилі для базової кнопки. 
+  &.primary {
+    background:  $Primary60;
+    &:hover {
+      background:$Primary50;
+    }
+    &:disabled {
+      color: $Neutral50;
+      background: $Neutral30;
+      &::after, &::before {
+        box-shadow: none;
+        background: url('./placeholder_disable.png') center (center / cover) no-repeat;
+      }
+      &:hover, &:focus {
+        background: $Neutral30;
+        box-shadow:none;
+      }
+    }
+    &.small {
+      &::after, &::before {
+        background: url('./placeholder_white_small.png') center (center / cover) no-repeat;
+      }
+      &:disabled {
+        &::after, &::before {
+          background: url('./placeholder_disable_small.png') center (center / cover) no-repeat;
+        }
+      }
+    }
+  }
+  // стилі для додаткової кнопки
+  &.secondary {
+    color: $Primary60;
+    background: $Primary10;
+    &::after, &::before {
+      background: url('./placeholder_orange.png') center (center / cover) no-repeat;
+    }
+    &:hover {
+      background: $Primary20;
+    }
+    &:focus {
+      box-shadow: 0px 0px 0px 4px rgba(249, 115, 22, 0.20);
+    }
+    &:disabled {
+      color: $Neutral50;
+      background: $Neutral30;
+      &::after, &::before {
+        box-shadow: none;
+        background: url('./placeholder_disable.png') center (center / cover) no-repeat;
+      }
+      &:hover, &:focus {
+        background: $Neutral30;
+        box-shadow:none;
+      }
+    }
+    &.small {
+      &::after, &::before {
+        background: url('./placeholder_orange_small.png') center (center / cover) no-repeat;
+      }
+      &:disabled {
+        &::after, &::before {
+          background: url('./placeholder_disable_small.png') center (center / cover) no-repeat;
+        }
+      }
+    }
+  }
+
+  // стилі для кнопки outline
+  &.outline {
+    color: $Primary60;
+    border: 1px solid $Primary60;
+    background: $Outline;
+    &:hover {
+      background: $Primary10;
+    }
+    &:focus {
+      box-shadow: 0px 0px 0px 4px rgba(249, 115, 22, 0.20);
+    }
+    &::after, &::before {
+      background: url('./placeholder_orange.png') center (center / cover) no-repeat;
+    }
+    &:disabled {
+      border: none;
+      color: $Neutral50;
+      background: $Neutral30;
+      &::after, &::before {
+        box-shadow: none;
+        background: url('./placeholder_disable.png') center (center / cover) no-repeat;
+      }
+      &:hover, &:focus {
+        background: $Neutral30;
+        box-shadow:none;
+      }
+    }
+    &.small {
+      &::after, &::before {
+        background: url('./placeholder_orange_small.png') center (center / cover) no-repeat;
+      }
+      &:disabled {
+        border: none;
+        &::after, &::before {
+          background: url('./placeholder_disable_small.png') center (center / cover) no-repeat;
+        }
+      }
+    }
+  }
+
+
+
+  &.login {
+    margin-top: 32px;
+    background:  $Primary60;
+    &:hover {
+      background:$Primary50;
+    }
+    &::after,&::before {
+      background: none;
+    }
+    &:disabled {
+      color: $Neutral50;
+      background: $Neutral30;
+       &:hover, &:focus {
+        background: $Neutral30;
+        box-shadow:none;
+      }
+    }
+    &.normal {
+      width: 443px;
+    }
+  }
+}
