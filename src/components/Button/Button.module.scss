@@ -2,6 +2,9 @@
 @import "../../style/variables.scss";
 
 // загальні стилі для всіх кнопок
+// Кпонпка має чотири типи type: primary, secondary, outline, login
+//та два розміри: normal, small
+//стан disabled для всіх кнопок однаковий
 .button {
   position: relative;
   border-radius: 58px;
